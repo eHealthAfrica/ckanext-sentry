@@ -4,7 +4,11 @@ import re
 
 from setuptools import setup, find_packages
 
-from ckanext.sentry import __version__, __description__
+# disable due to ModuleNotFoundError during installation
+# from ckanext.sentry import __version__, __description__
+
+__version__ = '0.0.2.1'
+__description__ = 'Sentry support for CKAN'
 
 RE_REQUIREMENT = re.compile(r'^\s*-r\s*(?P<filename>.*)$')
 
